@@ -3,8 +3,8 @@ public class Measurement
 {
 	//location 0
 	//year 1
-	//phosphate 4
-	//turbitity 6
+	//phosphate LAST
+	//turbitity 3
 	
 	private String location;
 	private int year;
@@ -17,8 +17,8 @@ public class Measurement
 		String[] split = s.split(" ");
 		location = split[0];
 		year = Integer.parseInt(split[1]);
-		phosphate = Double.parseDouble(split[4]);
-		turbitity = Double.parseDouble(split[6]);
+		phosphate = Double.parseDouble(split[3]);
+		turbitity = Double.parseDouble(split[split.length-1]);
 	}
 	
 	public String getLocation()
