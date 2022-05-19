@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import org.jfree.ui.RefineryUtilities;
 
 public class Main {
 
@@ -23,7 +24,10 @@ public class Main {
 		
 		Statistics s = new Statistics(m);
 		
-		
+		chart c = new chart("Stream Study - Table 2","Phosphate vs Turbidity", m);
+      		c.pack( );          
+      		RefineryUtilities.centerFrameOnScreen( c );          
+      		c.setVisible( true ); 
 	}
 
 }
