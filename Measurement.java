@@ -17,8 +17,8 @@ public class Measurement
 		String[] split = s.split(" ");
 		location = split[0];
 		year = Integer.parseInt(split[1]);
-		phosphate = Double.parseDouble(split[3]);
-		turbitity = Double.parseDouble(split[split.length-1]);
+		phosphate = Double.parseDouble(split[split.length-1]);
+		turbitity = Double.parseDouble(split[3]);
 	}
 	
 	public String getLocation()
