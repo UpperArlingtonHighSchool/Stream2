@@ -25,8 +25,8 @@ public class chart extends ApplicationFrame {
     super(applicationTitle);
     JFreeChart xylineChart = ChartFactory.createXYLineChart(
        chartTitle ,
-       "Phosphate (MgL)" ,
-       "Turbidity (NTU)" ,
+       "Salinity (PSU)" ,
+       "Conductivity (uS/cm)" ,
        createDataset(m) ,
        PlotOrientation.VERTICAL ,
        true , true , false);
@@ -46,7 +46,7 @@ public class chart extends ApplicationFrame {
  private XYDataset createDataset(ArrayList<Measurement> m) {
     final XYSeries compare = new XYSeries( "Compare" );     
     for(Measurement meas : m)
-  	  compare.add( meas.getPhosphate() , meas.getTurbitity() );               
+  	  compare.add( meas.getSalinity() , meas.getConducticity() );               
     final XYSeriesCollection dataset = new XYSeriesCollection( );          
     dataset.addSeries( compare );          
 
