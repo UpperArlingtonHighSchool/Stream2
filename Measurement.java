@@ -3,13 +3,13 @@ public class Measurement
 {
 	//location 0
 	//year 1
-	//phosphate LAST
-	//turbitity 3
+	//salinity 7
+	//conductivity 6
 	
 	private String location;
 	private int year;
-	private double phosphate;
-	private double turbitity;
+	private double salinity;
+	private double conductivty;
 	
 	
 	public Measurement(String s)
@@ -17,8 +17,8 @@ public class Measurement
 		String[] split = s.split(" ");
 		location = split[0];
 		year = Integer.parseInt(split[1]);
-		phosphate = Double.parseDouble(split[split.length-1]);
-		turbitity = Double.parseDouble(split[3]);
+		salinity = Double.parseDouble(split[7]);
+		conductivity = Double.parseDouble(split[6]);
 	}
 	
 	public String getLocation()
@@ -41,23 +41,23 @@ public class Measurement
 		year = y;
 	}
 	
-	public double getPhosphate()
+	public double getSalinity()
 	{
-		return phosphate;
+		return salinity;
 	}
 	
-	public void setPhosphate(double p)
+	public void setSalinity(double p)
 	{
-		phosphate = p;
+		salinity = p;
 	}
 	
-	public double getTurbitity()
+	public double getConductivity()
 	{
-		return turbitity;
+		return conductivity;
 	}
 	
-	public void setTurbitity(double t)
+	public void setConductivity(double t)
 	{
-		turbitity = t;
+		conductivity = t;
 	}
 }
