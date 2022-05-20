@@ -24,7 +24,7 @@ public class Main {
 		
 		Statistics s = new Statistics(m);
 		
-		chart c = new chart("Stream Study - Table 2","Phosphate vs Turbidity", m);
+		chart c = new chart("Stream Study - Table 2","Salinity vs Conductivity", m);
       		c.pack( );          
       		RefineryUtilities.centerFrameOnScreen( c );          
       		c.setVisible( true ); 
