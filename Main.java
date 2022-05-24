@@ -1,3 +1,4 @@
+//Dylan T
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -22,12 +23,14 @@ public class Main {
 			m.add(new Measurement(s));
 		}
 		
+		//Calculates one-var and two-var statistics
 		Statistics s = new Statistics(m);
 		
+		//Creates chart comparing Salinity vs Conductivity and passes in the data
 		chart c = new chart("Stream Study - Table 2","Salinity vs Conductivity", m);
-      		c.pack( );          
-      		RefineryUtilities.centerFrameOnScreen( c );          
-      		c.setVisible( true ); 
+      			c.pack( );          
+      			RefineryUtilities.centerFrameOnScreen( c );          
+      			c.setVisible( true ); 
 	}
 
 }
